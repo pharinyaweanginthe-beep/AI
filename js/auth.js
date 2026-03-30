@@ -84,12 +84,12 @@ document.addEventListener('DOMContentLoaded', () => {
           });
         })
         .catch((error) => {
-          let errorMsg = 'เกิดข้อผิดพลาดในการสมัครสมาชิก';
+          let errorMsg = 'เกิดข้อผิดพลาด: ' + error.message;
           if (error.code === 'auth/email-already-in-use') {
             errorMsg = 'อีเมลนี้ถูกใช้งานแล้ว กรุณาใช้อีเมลอื่น';
           }
           showAlert(errorMsg);
-          console.error(error);
+          console.error('[Firebase Register Error]', error);
         });
     });
   }
@@ -113,8 +113,8 @@ document.addEventListener('DOMContentLoaded', () => {
           }, 1500);
         })
         .catch((error) => {
-          showAlert('อีเมลหรือรหัสผ่านไม่ถูกต้อง');
-          console.error(error);
+          showAlert('เข้าสู่ระบบล้มเหลว: ' + error.message);
+          console.error('[Firebase Login Error]', error);
         });
     });
   }
