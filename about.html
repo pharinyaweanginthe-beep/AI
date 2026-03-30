@@ -56,7 +56,11 @@
         </div>
 
         <div class="service-label s2 animate-on-scroll" id="svc-sales">
-          <h3>💼 Intelligent Sales &amp; Marketing</h3>
+          <h3>💼 Intelligent Sales & Marketing</h3>
+        </div>
+
+        <div class="service-label s3 animate-on-scroll" id="svc-personalization">
+          <h3>🎯 Personalization</h3>
         </div>
 
         <div class="circle-center">
@@ -64,16 +68,20 @@
           <img src="images/cute-robots.png" alt="AI Robot Mascots">
         </div>
 
-        <div class="service-label s5 animate-on-scroll" id="svc-analytics">
-          <h3>📊 Predictive Analytics &amp; Insights</h3>
-        </div>
-
-        <div class="service-label s3 animate-on-scroll" id="svc-personalization">
-          <h3>🎯 Personalization &amp; Recommendations</h3>
-        </div>
-
         <div class="service-label s4 animate-on-scroll" id="svc-search">
-          <h3>🔍 AI-Powered Search &amp; Voice</h3>
+          <h3>🔍 AI Search & Voice</h3>
+        </div>
+
+        <div class="service-label s5 animate-on-scroll" id="svc-analytics">
+          <h3>📊 Predictive Analytics</h3>
+        </div>
+
+        <div class="service-label s6 animate-on-scroll" id="svc-security">
+          <h3>🛡️ Next-Gen Cybersecurity</h3>
+        </div>
+
+        <div class="service-label s7 animate-on-scroll" id="svc-generative">
+          <h3>🎨 Generative AI</h3>
         </div>
       </div>
     </div>
@@ -105,12 +113,36 @@
         </div>
         <div class="card animate-on-scroll" id="detail-personalize">
           <div class="card-icon">🎯</div>
-          <h3>Personalization & Recommendations</h3>
+          <h3>Personalization</h3>
           <p>แนะนำสินค้าและบริการแบบเฉพาะบุคคล เพิ่มประสบการณ์ที่ดีให้กับลูกค้าทุกคน</p>
+        </div>
+        <div class="card animate-on-scroll" id="detail-security">
+          <div class="card-icon">🛡️</div>
+          <h3>Next-Gen Cybersecurity</h3>
+          <p>ปกป้องข้อมูลและระบบโครงสร้างพื้นฐานดิจิทัลของคุณด้วย AI ที่เฝ้าระวังและตอบสนองต่อภัยคุกคามแบบเรียลไทม์</p>
+        </div>
+        <div class="card animate-on-scroll" id="detail-generative">
+          <div class="card-icon">🎨</div>
+          <h3>Generative & Creative AI</h3>
+          <p>สร้างสรรค์คอนเทนต์ รูปภาพ วิดีโอ หรือดีไซน์ชิ้นงานอย่างอัจฉริยะ พร้อมปลดล็อกขีดจำกัดจินตนาการ</p>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Service Modal -->
+  <div id="serviceModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-body">
+        <img id="modalImg" src="" alt="Service Image">
+        <div class="modal-text">
+          <h2 id="modalTitle" class="gradient-text">Title</h2>
+          <p id="modalDesc">Description goes here...</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">

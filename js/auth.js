@@ -121,6 +121,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- NAVBAR AUTH STATE OBSERVER ---
   auth.onAuthStateChanged((user) => {
+    // 1. ตรวจสอบสิทธิ์การเข้าถึงหน้าต่างๆ (Page Protection)
+    const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+    const isAuthPage = currentFile === 'login.html' || currentFile === 'register.html';
+
+    if (!user && !isAuthPage) {
+      // หากยังไม่ได้ล็อคอิน และพยายามเข้าหน้าอื่นๆ -> บังคับเด้งไปหน้า login
+      window.location.replace('login.html');
+      return;
+    }
+
+    if (user && isAuthPage) {
+      // หากล็อคอินแล้ว และพยายามเข้าหน้า login/register -> เด้งไปหน้าแรก
+      window.location.replace('index.html');
+      return;
+    }
+
     if (!navLinks) return;
     
     // First, find the auth link or user container

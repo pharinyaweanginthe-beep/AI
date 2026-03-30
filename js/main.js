@@ -130,4 +130,83 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     setTimeout(typeWriter, 500);
   }
+
+  // --- Service Modal Logic ---
+  const serviceModal = document.getElementById('serviceModal');
+  const modalClose = document.querySelector('.close-modal');
+  const serviceLabels = document.querySelectorAll('.service-label');
+  
+  if (serviceModal && serviceLabels.length > 0) {
+    const serviceData = {
+      'svc-automation': {
+        title: 'AI-Powered Automation',
+        img: 'images/robot-arm.png',
+        desc: 'ระบบอัตโนมัติอัจฉริยะที่ช่วยลดขั้นตอนการทำงานที่ซ้ำซ้อน เพิ่มประสิทธิภาพและลดต้นทุนการดำเนินงาน โดยระบบสามารถเรียนรู้วิธีการทำงานของคุณและจัดการเอกสาร ข้อมูล หรือสั่งการอุปกรณ์ต่างๆ ได้แบบอัตโนมัติ 24 ชั่วโมง'
+      },
+      'svc-sales': {
+        title: 'Intelligent Sales & Marketing',
+        img: 'images/ai-business.png',
+        desc: 'เพิ่มยอดขายด้วยระบบการตลาดอัจฉริยะ วิเคราะห์พฤติกรรมกลุ่มเป้าหมายเชิงลึกและส่งข้อเสนอที่ตรงใจลูกค้าแบบ Real-time พร้อมทั้งแนะนำกลยุทธ์การขายที่เหมาะสมที่สุดสำหรับแต่ละสถานการณ์'
+      },
+      'svc-personalization': {
+        title: 'Personalization & Recommendations',
+        img: 'images/cute-robots.png',
+        desc: 'แนะนำสินค้าและบริการแบบเฉพาะบุคคล (Personalization) ที่เรียนรู้จากรสนิยมและความชอบของลูกค้าแต่ละคน เพื่อเพิ่มประสบการณ์ที่ดี สร้างความประทับใจ และกระตุ้นให้เกิดการซื้อซ้ำได้อย่างมีประสิทธิภาพ'
+      },
+      'svc-search': {
+        title: 'AI-Powered Search & Voice',
+        img: 'images/robot-head.png',
+        desc: 'ค้นหาอัจฉริยะด้วยเสียงและข้อความ พร้อม Natural Language Processing (NLP) ที่ถูกเทรนให้เข้าใจภาษาไทยได้อย่างลึกซึ้ง สามารถตอบคำถาม ค้นหาข้อมูล หรือสั่งงานด้วยเสียงเสมือนมีมนุษย์คอยช่วยเหลือ'
+      },
+      'svc-analytics': {
+        title: 'Predictive Analytics & Insights',
+        img: 'images/robot-warrior.png',
+        desc: 'ระบบช่วยวิเคราะห์ข้อมูลล่วงหน้าด้วย AI เพื่อคาดการณ์แนวโน้มตลาด พฤติกรรมลูกค้า และโอกาสทางธุรกิจในอีก 3-6 เดือนข้างหน้า ทำให้คุณสามารถวางแผนกลยุทธ์ได้อย่างแม่นยำและล้ำหน้าคู่แข่งเสมอ'
+      },
+      'svc-security': {
+        title: 'Next-Gen Cybersecurity',
+        img: 'images/hero-ai.png',
+        desc: 'ปกป้องข้อมูลและระบบโครงสร้างพื้นฐานดิจิทัลของคุณด้วย AI ที่เฝ้าระวัง ค้นหา และตอบสนองต่อภัยคุกคามทางไซเบอร์แบบเรียลไทม์ เรียนรู้รูปแบบการโจมตีใหม่ๆ ด้วยตนเอง เพื่อยกระดับความปลอดภัยให้เหนือกว่าทุกมาตรฐาน'
+      },
+      'svc-generative': {
+        title: 'Generative & Creative AI',
+        img: 'images/robot-head.png',
+        desc: 'ผสานพลังความคิดสร้างสรรค์ด้วย Generative AI ที่สามารถแต่งเพลง เขียนคอนเทนต์ สร้างงานศิลปะ ออกแบบโมเดล 3 มิติ และเขียนโค้ดได้อย่างฉับไว ช่วยลดขั้นตอนและเพิ่มเวลาให้คุณในการต่อยอดความคิดสร้างสรรค์'
+      }
+    };
+
+    serviceLabels.forEach(label => {
+      label.addEventListener('click', () => {
+        const id = label.id;
+        const data = serviceData[id];
+        if (data) {
+          document.getElementById('modalTitle').textContent = data.title;
+          document.getElementById('modalImg').src = data.img;
+          document.getElementById('modalDesc').textContent = data.desc;
+          
+          serviceModal.style.display = 'flex';
+          setTimeout(() => {
+            serviceModal.classList.add('show');
+          }, 10);
+        }
+      });
+    });
+
+    const closeMod = () => {
+      serviceModal.classList.remove('show');
+      setTimeout(() => {
+        serviceModal.style.display = 'none';
+      }, 300);
+    };
+
+    if (modalClose) {
+      modalClose.addEventListener('click', closeMod);
+    }
+
+    window.addEventListener('click', (e) => {
+      if (e.target === serviceModal) {
+        closeMod();
+      }
+    });
+  }
 });
