@@ -2,6 +2,9 @@
 
 ![AI Technologies Banner](images/hero-ai.png)
 
+## 🌐 Live Demo
+ไปที่เว็บไซต์: [ai-tawny-rho.vercel.app](https://ai-tawny-rho.vercel.app/)
+
 เว็บไซต์ **AI Technologies** (AITech) เป็นแพลตฟอร์มที่นำเสนอข้อมูลเกี่ยวกับเทคโนโลยีปัญญาประดิษฐ์ (Artificial Intelligence) และโซลูชันด้าน AI สำหรับธุรกิจยุคใหม่ ออกแบบมาให้มีความทันสมัย รองรับการใช้งานทุกอุปกรณ์ (Responsive Design) และมีเอฟเฟกต์การแสดงผลที่สวยงาม
 
 ## 🌟 ฟีเจอร์หลัก (Key Features)
