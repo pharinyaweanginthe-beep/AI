@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Technologies - เข้าสู่ระบบ">
+  <title>AI Technologies | Login</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">AI<span>Tech</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">เกี่ยวกับ</a></li>
+        <li><a href="applications.html">AI Applications</a></li>
+        <li><a href="news.html">News & Articles</a></li>
+        <li><a href="login.html" class="active">เข้าสู่ระบบ / สมัครสมาชิก</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="auth-section">
+    <div class="container">
+      <div class="auth-card animate-on-scroll">
+        <div class="auth-header">
+          <h2><span class="gradient-text">เข้าสู่ระบบ</span></h2>
+          <p>ยินดีต้อนรับกลับสู่ AI Technologies</p>
+        </div>
+        <form id="loginForm" class="auth-form">
+          <div class="form-group">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" placeholder="••••••••" required>
+          </div>
+          <div class="form-options">
+            <label class="remember-me">
+              <input type="checkbox" id="rememberMe"> จดจำฉันในระบบ
+            </label>
+            <a href="#" class="forgot-password">ลืมรหัสผ่าน?</a>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">เข้าสู่ระบบ</button>
+        </form>
+        <div class="auth-footer">
+          <p>ยังไม่มีบัญชีใช่หรือไม่? <a href="register.html" class="auth-link">สมัครสมาชิก</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div>
+        <p class="footer-label" style="margin-bottom: 0.5rem; color: var(--text-secondary);">Follow Us</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/pharinya.weangintha" aria-label="Facebook" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/phar.one_0?igsh=MWV3MW85MXpkY2J2cw%3D%3D&utm_source=qr" aria-label="Instagram" target="_blank">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+          </a>
+          <a href="https://www.youtube.com/shorts/vcEZbiiICKk" aria-label="YouTube" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z"/><polygon points="9.75,15.02 15.5,11.75 9.75,8.48" fill="#0a0a1a"/></svg>
+          </a>
+        </div>
+        <div style="margin-top: 1.5rem; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+          <p style="margin-bottom: 0.3rem;"><strong>ชื่อเฟส:</strong> Pharinya Weanginthe</p>
+          <p style="margin: 0;"><strong>เบอร์โทร:</strong> 0967547424</p>
+        </div>
+      </div>
+      <p>© 2025 Artificial Intelligence All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
